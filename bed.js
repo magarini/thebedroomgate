@@ -15,7 +15,7 @@ function preload() {
     img = loadImage('fabric.jpg');
    
     soundFormats('mp3', 'ogg');
-    mySound = loadSound('bedroom site.mp3');
+    mySound = loadSound('bedroom site_fadein.mp3');
 
   }
 
