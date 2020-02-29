@@ -77,6 +77,11 @@
 
         @media screen and (max-width: 600px) {
         h1{
+        font-size:20px;
+        width:100%;
+        padding:20px;
+        }
+        h2{
         font-size:15px;
         width:100%;
         padding:20px;
@@ -91,14 +96,20 @@ strong{
     font-style: italic;
 }
 
-
-
+p{
+    color:white;
+}
+button{
+    background-color: black;
+    border:none;
+}
     </style>
 </head>
 <body>
    
     <div class="container">
         <img id="ear" src="earwhite.png" >
+
         <h1>☽ midnight explorations</h1>
         
     </div>
@@ -107,5 +118,35 @@ strong{
     <h2><strong>the bedroom gate</strong> | <a href="https://magarini.github.io/night-explorations/">next adventure ></a></h2>
 
 </div>
+<div class="container">
+    <!-- <p>Welcome to your midnight adventure 
+        This is a space where you enter alone in your bedroom preferably at night 
+        Where your body is in a threshold between your room and the digital neighborhoods you are drifting
+        Its a window to other spaces for you to explore and experience with your senses
+        It smells like your bedroom but you can touch them through your mouse or your fingertips
+        </p> -->
+        <p id="demo"></p>
+
+</div>
+<script>
+    var i = 0;
+    var txt = 'Welcome to your midnight adventure . This is a space where you enter alone in your bedroom preferably at night. Where your body is in a threshold between your room and the digital neighborhoods you are drifting. Its a window to other spaces for you to explore and experience with your senses. It smells like your bedroom but you can touch only through your mouse or your fingertips';
+    var speed = 50;
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    if (document.readyState === 'loading') {  // Loading hasn't finished yet
+  document.addEventListener('DOMContentLoaded', typeWriter);
+} else {  // `DOMContentLoaded` has already fired
+    typeWriter()();
+}
+
+    </script>
 </body>
 </html>
