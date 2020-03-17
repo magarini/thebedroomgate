@@ -35,7 +35,7 @@ function setup(){
     texture(stars);
     push();
     rotateZ(frameCount*0.1);
-    sphere(windowWidth*3);
+    sphere(windowHeight*3);
     pop();
     orbitControl();
     ambientLight(random(200,255));
