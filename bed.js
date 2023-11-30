@@ -80,4 +80,6 @@ model(bed);
   }
   }
 
-  
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
